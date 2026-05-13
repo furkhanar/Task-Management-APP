@@ -13,7 +13,7 @@ function App() {
 
     try {
 
-      const res = await axios.get("http://localhost:8080/tasks");
+      const res = await axios.get("https://task-management-app-w3ql.onrender.com/tasks");
 
       setTasks(res.data);
 
@@ -33,7 +33,7 @@ function App() {
 
     try {
 
-      await axios.post("http://localhost:8080/tasks", {
+      await axios.post("https://task-management-app-w3ql.onrender.com/tasks", {
         title
       });
 
@@ -51,7 +51,7 @@ function App() {
 
     try {
 
-      await axios.delete(`http://localhost:8080/tasks/${id}`);
+      await axios.delete(`https://task-management-app-w3ql.onrender.com/tasks/${id}`);
 
       fetchTasks();
 
@@ -65,7 +65,7 @@ function App() {
 
     try {
 
-      await axios.put(`http://localhost:8080/tasks/${task.id}`, {
+      await axios.put(`https://task-management-app-w3ql.onrender.com/tasks/${task.id}`, {
         title: task.title,
         completed: !task.completed
       });
